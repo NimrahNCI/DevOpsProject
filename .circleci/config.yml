@@ -17,7 +17,7 @@ jobs:
   build:
     working_directory: ~/my-express-app
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:14
     steps:
       - checkout
       - run: 
