@@ -93,7 +93,7 @@ app.get('/', (req, res) => {
                                 <a class="nav-link" href="/about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/gallery">Gallery</a>
+                                <a class="nav-link" href="/mathpractice">Math Practice</a>
                             </li>
                         </ul>
                     </div>
@@ -212,7 +212,7 @@ app.get('/about', (req, res) => {
                                 <a class="nav-link" href="/about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/gallery">Gallery</a>
+                                <a class="nav-link" href="/mathpractice">Math Practice</a>
                             </li>
                         </ul>
                     </div>
@@ -262,11 +262,11 @@ res.send('Thank you for your message! We will get back to you soon.');
 });
 
 
-app.get('/gallery', (req, res) => {
+app.get('/mathpractice', (req, res) => {
     const images = [
         '/kids.png',
-        '/gallery/image2.jpg',
-        '/gallery/image3.jpg'
+        '/mathpractice/image2.jpg',
+        '/mathpractice/image3.jpg'
         // Add more image URLs as needed
     ];
 
@@ -339,6 +339,14 @@ app.get('/gallery', (req, res) => {
                 font-family: Georgia, 'Times New Roman', Times, serif;
                 font-size: 19px;
             }
+
+            .check-answers-button {
+                padding: 1px 6px;
+                border: 1px outset buttonborder;
+                border-radius: 3px;
+                color: buttontext;
+                background-color: buttonface;
+            }
         </style>
     </head>
             <body>
@@ -356,18 +364,66 @@ app.get('/gallery', (req, res) => {
                                 <a class="nav-link" href="/about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/gallery">Gallery</a>
+                                <a class="nav-link" href="/mathpractice">Math Practice</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
                 
-                <div class="container">
-                    <h1>Gallery</h1>
+                <div class="gallery-container">
                     <div class="gallery">
                         ${galleryHTML}
                     </div>
                 </div>
+                <div class="math-practice">
+                    <h1>Math Practice</h1>
+                    <hr>
+                    <p>Type your answer for each math sum below. Right click 'Check answers' and select 'Open link in new tab' to open a calculator when finished!</p>
+                    <form id="math-practice-form">
+                        <div class="sum">
+                            <p>Q1) 14 + 7 =</p>
+                            <div class="answer">
+                                <label>
+                                    <input type="text" name="q1">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sum">
+                            <p>Q2) 8 - 3 =</p>
+                            <div class="answers">
+                                <label>
+                                    <input type="text" name="q2">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sum">
+                            <p>Q3) 4 x 3 =</p>
+                            <div class="answers">
+                                <label>
+                                    <input type="text" name="q3">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sum">
+                            <p>Q4) 30 / 6 =</p>
+                            <div class="answers">
+                                <label>
+                                    <input type="text" name="q4">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sum">
+                            <p>Q5) 4 x __ = 12</p>
+                            <div class="answers">
+                                <label>
+                                    <input type="text" name="q5">
+                                </label>
+                            </div>
+                        </div>
+                        </br>
+                        <a href="https://www.google.com/search?q=calculator&rlz=1C1ONGR_en-GBIE978IE978&oq=calcy&gs_lcrp=EgZjaHJvbWUqDwgBEAAYChiDARixAxiABDIJCAAQRRg5GIAEMg8IARAAGAoYgwEYsQMYgAQyDwgCEAAYChiDARixAxiABDIPCAMQABgKGIMBGLEDGIAEMg8IBBAAGAoYgwEYsQMYgAQyDAgFEAAYChixAxiABDIJCAYQABgKGIAEMgwIBxAAGAoYsQMYgAQyDwgIEAAYChiDARixAxiABDIPCAkQABgKGIMBGLEDGIAE0gEIMzc1NGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" class="check-answers-button">Check answers</a>
+                    </form>
+                </div
             </body>
         </html>
     `);
