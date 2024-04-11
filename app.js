@@ -264,9 +264,7 @@ res.send('Thank you for your message! We will get back to you soon.');
 
 app.get('/mathpractice', (req, res) => {
     const images = [
-        '/kids.png',
-        '/mathpractice/image2.jpg',
-        '/mathpractice/image3.jpg'
+       
         // Add more image URLs as needed
     ];
 
@@ -370,11 +368,7 @@ app.get('/mathpractice', (req, res) => {
                     </div>
                 </nav>
                 
-                <div class="gallery-container">
-                    <div class="gallery">
-                        ${galleryHTML}
-                    </div>
-                </div>
+        
                 <div class="math-practice">
                     <h1>Math Practice</h1>
                     <hr>
