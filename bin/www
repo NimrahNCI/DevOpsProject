@@ -1,5 +1,5 @@
 var app = require('../app');
-var debug = require('debug')('phishsense:server');
+var debug = require('debug')('my-express-app:server');
 var http = require('http');
 
 /**
